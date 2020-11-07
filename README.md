@@ -5,4 +5,9 @@ A simple module that creates a https application load balancer using the default
 ## Usage
 
 ```hcl
+module "aws_simple_alb" {
+  source = "github.com/CalebMacdonaldBlack/terraform-aws-simple-alb"
+
+  lb_listener_certificate_arn = var.alb_certificate_arn
+}
 ```
