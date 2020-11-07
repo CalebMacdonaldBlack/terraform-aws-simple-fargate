@@ -53,3 +53,15 @@ variable "ecs_cluster_name" {
   description = "The name of the ECS Fargate Cluster"
   type        = string
 }
+
+variable "scale_target_max_capacity" {
+  description = "The max capacity of the scalable target for ECS Fargate service"
+  default     = 5
+  type        = number
+}
+
+variable "scale_target_min_capacity" {
+  description = "The min capacity of the scalable target for ECS Fargate service"
+  default     = 1
+  type        = number
+}
