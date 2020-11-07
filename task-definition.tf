@@ -91,7 +91,7 @@ resource "aws_ecs_task_definition" "service" {
         "hostPort": 5000
       }
     ],
-    "environment": ${jsonencode(concat([{name = "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI", value = "creds"}]var.container_environment_variables))}
+    "environment": ${jsonencode(concat([{name = "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI", value = "creds"}], var.container_environment_variables))}
     ,
     "cpu": ${var.container_cpu},
     "memory": ${var.container_memory},
