@@ -20,7 +20,7 @@ resource "aws_security_group" "lb" {
 
 resource "aws_lb" "lb" {
   name               = "${var.name_prefix}-alb"
-  subnets            = data.aws_subnet_ids.default_subnet_ids
+  subnets            = data.aws_subnet_ids.default_subnet_ids.ids
   load_balancer_type = "application"
   internal           = false
   security_groups    = [aws_security_group.lb.id]
