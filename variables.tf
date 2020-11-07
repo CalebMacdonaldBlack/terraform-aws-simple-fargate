@@ -5,7 +5,7 @@ variable "lb_listener_certificate_arn" {
 
 variable "name_prefix" {
   default = "The name prefix of the resources created in this module."
-  type = string
+  type    = string
 }
 
 variable "container_cpu" {
@@ -46,5 +46,10 @@ variable "log_group_region" {
 
 variable "task_policy_arn" {
   description = "The arn of the task policy"
+  type        = string
+}
+
+variable "ecs_cluster_name" {
+  description = "The name of the ECS Fargate Cluster"
   type        = string
 }
