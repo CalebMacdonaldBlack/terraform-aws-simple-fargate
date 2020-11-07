@@ -1,6 +1,6 @@
 # AWS Fargate Terraform Module
 
-A simple module that creates a https application load balancer using the default vpc and subnets.
+A simple module that creates a https fargate service with autoscaling.
 
 ## Usage
 
