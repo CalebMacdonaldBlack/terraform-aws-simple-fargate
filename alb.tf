@@ -34,7 +34,7 @@ resource "aws_lb_target_group" "lb_target_group" {
   target_type = "ip"
 
   health_check {
-    path     = "/public/health"
+    path     = "/health"
     protocol = "HTTP"
     port     = 5000
     matcher  = "200"
