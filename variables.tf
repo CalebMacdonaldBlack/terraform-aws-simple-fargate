@@ -8,11 +8,6 @@ variable "name_prefix" {
   type = string
 }
 
-variable "name_prefix" {
-  description = "The name prefix of the resources created in this module."
-  type        = string
-}
-
 variable "container_cpu" {
   description = "The amount of cpu to allocate to the task"
   type        = number
